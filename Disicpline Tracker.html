@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Quantum Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 id="theader">Quantum Tracker</h1>
+    </header>
+
+    <main>
+        <!-- Page 1 - Off Day -->
+        <div class="page" id="page-1">
+            <div class="IntroCard">
+                <h3 id="introheader">Was today an off day?</h3>
+                <div class="radio-group">
+                    <input type="radio" id="off-yes" name="off-day" value="1">
+                    <label for="off-yes">Yes</label>
+                    <input type="radio" id="off-no" name="off-day" value="0">
+                    <label for="off-no">No</label>
+                </div>
+            </div>
+            <button class="next-btn" data-section="offday">Next</button>
+        </div>
+
+        <!-- Page 2 - Daily Discipline -->
+        <div class="page" id="page-2">
+            <section>
+                <h2 id="theader">Daily Discipline</h2>
+                <div class="DailyCard">
+                    <ol type="a">
+                        <li>
+                            <h3>Did you create a To-Do list today?</h3>
+                            <div class="radio-group">
+                                <input type="radio" id="todo-yes" name="todo" value="1">
+                                <label for="todo-yes">Yes</label>
+                                <input type="radio" id="todo-no" name="todo" value="0">
+                                <label for="todo-no">No</label>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Did you create a Not-To-Do list today?</h3>
+                            <div class="radio-group">
+                                <input type="radio" id="nottodo-yes" name="nottodo" value="1">
+                                <label for="nottodo-yes">Yes</label>
+                                <input type="radio" id="nottodo-no" name="nottodo" value="0">
+                                <label for="nottodo-no">No</label>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Routine Check</h3>
+                            <div class="radio-group">
+                                <input type="checkbox" id="routine-morning" name="routine-morning" value="1">
+                                <label for="routine-morning">Morning</label>
+                                <input type="checkbox" id="routine-night" name="routine-night" value="1">
+                                <label for="routine-night">Night</label>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <div class="button-container">
+                <button class="back-btn">Back</button>
+                <button class="next-btn" data-section="discipline">Next</button>
+            </div>
+        </div>
+
+        <!-- Page 3 - Wisdom in Action -->
+        <div class="page" id="page-3">
+            <h2 id="theader">Wisdom in Action</h2>
+            <div class="DailyCard">
+                <h3>Choose The Wisdom Source</h3>
+                <h4>Book 1</h4>
+                <select id="book1" name="book1">
+                    <option value="Dark Side of Discipline">Dark Side of Discipline</option>
+                    <option value="Be Useful">Be Useful</option>
+                    <option value="DOSE Effect">DOSE Effect</option>
+                    <option value="Quantum Leap Strategy">Quantum Leap Strategy</option>
+                </select>
+
+                <h3>Did you implement the action plan for Book 1?</h3>
+                <div class="radio-group">
+                    <input type="radio" id="book1-action-yes" name="book1-action" value="1">
+                    <label for="book1-action-yes">Yes</label>
+                    <input type="radio" id="book1-action-no" name="book1-action" value="0">
+                    <label for="book1-action-no">No</label>
+                </div>
+            </div>
+            
+            <div class="DailyCard">
+                <h4>Book 2</h4>
+                <select id="book2" name="book2">
+                    <option value="Dark Side of Discipline">Dark Side of Discipline</option>
+                    <option value="Be Useful">Be Useful</option>
+                    <option value="DOSE Effect">DOSE Effect</option>
+                    <option value="Quantum Leap Strategy">Quantum Leap Strategy</option>
+                </select>
+
+                <h3>Did you implement the action plan for Book 2?</h3>
+                <div class="radio-group">
+                    <input type="radio" id="book2-action-yes" name="book2-action" value="1">
+                    <label for="book2-action-yes">Yes</label>
+                    <input type="radio" id="book2-action-no" name="book2-action" value="0">
+                    <label for="book2-action-no">No</label>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="back-btn">Back</button>
+                <button class="next-btn" data-section="wisdom">Next</button>
+            </div>
+        </div>
+
+        <!-- Page 4 - Vision-Driven Skills -->
+        <div class="page" id="page-4">
+            <h2 id="theader">Vision-Driven Skills</h2>
+            <div class="DailyCard">
+                <h3>Skill 1</h3>
+                <select id="skill1" name="skill1">
+                    <option value="Chess">Chess</option>
+                    <option value="Gym">Gym</option>
+                    <option value="Rubiks Cube">Rubik's Cube</option>
+                    <option value="Editing">Editing</option>
+                    <option value="Videography">Videography</option>
+                    <option value="Cycling">Cycling</option>
+                    <option value="None">None</option>
+                </select>
+            </div>
+
+            <div class="DailyCard">
+                <h3>Skill 2</h3>
+                <select id="skill2" name="skill2">
+                    <option value="Chess">Chess</option>
+                    <option value="Gym">Gym</option>
+                    <option value="Rubiks Cube">Rubik's Cube</option>
+                    <option value="Editing">Editing</option>
+                    <option value="Videography">Videography</option>
+                    <option value="Cycling">Cycling</option>
+                    <option value="None">None</option>
+                </select>
+            </div>
+
+            <div class="DailyCard">
+                <h3>Skill 3</h3>
+                <select id="skill3" name="skill3">
+                    <option value="Chess">Chess</option>
+                    <option value="Gym">Gym</option>
+                    <option value="Rubiks Cube">Rubik's Cube</option>
+                    <option value="Editing">Editing</option>
+                    <option value="Videography">Videography</option>
+                    <option value="Cycling">Cycling</option>
+                    <option value="None">None</option>
+                </select>
+            </div>
+            <div class="button-container">
+                <button class="back-btn">Back</button>
+                <button class="next-btn" data-section="skills">Next</button>
+            </div>
+        </div>
+
+        <!-- Page 5 - Ratings -->
+        <div class="page" id="page-5">
+            <h3 id="theader">Mood Rating</h3>
+            <div class="DailyCard">
+                <div class="stars">
+                    <input type="radio" id="m-star5" name="rating-mood" value="5" />
+                    <label for="m-star5">&#9733;</label>
+                    <input type="radio" id="m-star4" name="rating-mood" value="4" />
+                    <label for="m-star4">&#9733;</label>
+                    <input type="radio" id="m-star3" name="rating-mood" value="3" />
+                    <label for="m-star3">&#9733;</label>
+                    <input type="radio" id="m-star2" name="rating-mood" value="2" />
+                    <label for="m-star2">&#9733;</label>
+                    <input type="radio" id="m-star1" name="rating-mood" value="1" />
+                    <label for="m-star1">&#9733;</label>
+                </div>
+            </div>
+
+            <h3 id="theader">Productivity Level</h3>
+            <div class="DailyCard">
+                <div class="stars">
+                    <input type="radio" id="p-star5" name="rating-productivity" value="5" />
+                    <label for="p-star5">&#9733;</label>
+                    <input type="radio" id="p-star4" name="rating-productivity" value="4" />
+                    <label for="p-star4">&#9733;</label>
+                    <input type="radio" id="p-star3" name="rating-productivity" value="3" />
+                    <label for="p-star3">&#9733;</label>
+                    <input type="radio" id="p-star2" name="rating-productivity" value="2" />
+                    <label for="p-star2">&#9733;</label>
+                    <input type="radio" id="p-star1" name="rating-productivity" value="1" />
+                    <label for="p-star1">&#9733;</label>
+                </div>
+            </div>
+
+            <h3 id="theader">Physical Activity / Health</h3>
+            <div class="DailyCard">
+                <div class="stars">
+                    <input type="radio" id="ph-star5" name="rating-health" value="5" />
+                    <label for="ph-star5">&#9733;</label>
+                    <input type="radio" id="ph-star4" name="rating-health" value="4" />
+                    <label for="ph-star4">&#9733;</label>
+                    <input type="radio" id="ph-star3" name="rating-health" value="3" />
+                    <label for="ph-star3">&#9733;</label>
+                    <input type="radio" id="ph-star2" name="rating-health" value="2" />
+                    <label for="ph-star2">&#9733;</label>
+                    <input type="radio" id="ph-star1" name="rating-health" value="1" />
+                    <label for="ph-star1">&#9733;</label>
+                </div>
+            </div>
+
+            <h3 id="theader">Focus Level</h3>
+            <div class="DailyCard">
+                <div class="stars">
+                    <input type="radio" id="f-star5" name="rating-focus" value="5" />
+                    <label for="f-star5">&#9733;</label>
+                    <input type="radio" id="f-star4" name="rating-focus" value="4" />
+                    <label for="f-star4">&#9733;</label>
+                    <input type="radio" id="f-star3" name="rating-focus" value="3" />
+                    <label for="f-star3">&#9733;</label>
+                    <input type="radio" id="f-star2" name="rating-focus" value="2" />
+                    <label for="f-star2">&#9733;</label>
+                    <input type="radio" id="f-star1" name="rating-focus" value="1" />
+                    <label for="f-star1">&#9733;</label>
+                </div>
+            </div>
+
+            <h3 id="theader">Sleep Quality</h3>
+            <div class="DailyCard">
+                <div class="stars">
+                    <input type="radio" id="s-star5" name="rating-sleep" value="5" />
+                    <label for="s-star5">&#9733;</label>
+                    <input type="radio" id="s-star4" name="rating-sleep" value="4" />
+                    <label for="s-star4">&#9733;</label>
+                    <input type="radio" id="s-star3" name="rating-sleep" value="3" />
+                    <label for="s-star3">&#9733;</label>
+                    <input type="radio" id="s-star2" name="rating-sleep" value="2" />
+                    <label for="s-star2">&#9733;</label>
+                    <input type="radio" id="s-star1" name="rating-sleep" value="1" />
+                    <label for="s-star1">&#9733;</label>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="back-btn">Back</button>
+                <button class="next-btn" data-section="ratings">Next</button>
+            </div>
+        </div>
+
+        <!-- Page 6 - Discipline & Reflection -->
+        <div class="page" id="page-6">
+            <h2 id="theader">Discipline & Reflection</h2>
+            <div class="DailyCard">
+                <ol type="a">
+                    <li>
+                        <h3>Delayed Gratification?</h3>
+                        <div class="radio-group">
+                            <input type="radio" id="grat-yes" name="grat" value="1">
+                            <label for="grat-yes">Yes</label>
+                            <input type="radio" id="grat-no" name="grat" value="0">
+                            <label for="grat-no">No</label>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Did you overcome distractions today?</h3>
+                        <div class="radio-group">
+                            <input type="radio" id="dist-yes" name="dist" value="1">
+                            <label for="dist-yes">Yes</label>
+                            <input type="radio" id="dist-no" name="dist" value="0">
+                            <label for="dist-no">No</label>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="button-container">
+                <button class="back-btn">Back</button>
+                <button class="next-btn" data-section="reflection">Next</button>
+            </div>
+        </div>
+
+<!-- Updated Page 7 Section in your HTML -->
+<div class="page" id="page-7">
+    <section class="archetype-test">
+        <!-- King Archetype Section -->
+        <section class="archetype-section" data-archetype="king">
+            <div class="DailyCard archetype-card">
+                <div class="archetype-chart-container">
+                    <canvas class="archetype-chart" width="200" height="150"></canvas>
+                </div>
+                <div class="archetype-questions">
+                    <p>Did I lead today with clarity, composure, and calmness?</p>
+                    <div class="radio-group">
+                        <input type="radio" id="clarity-yes" name="king-q1" value="1">
+                        <label for="clarity-yes">Yes</label>
+                        <input type="radio" id="clarity-no" name="king-q1" value="0">
+                        <label for="clarity-no">No</label>
+                    </div>
+                    <p>Did I communicate with authority, clarity, and confidence?</p>
+                    <div class="radio-group">
+                        <input type="radio" id="comms-yes" name="king-q2" value="1">
+                        <label for="comms-yes">Yes</label>
+                        <input type="radio" id="comms-no" name="king-q2" value="0">
+                        <label for="comms-no">No</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sage Archetype Section -->
+        <section class="archetype-section" data-archetype="sage">
+            <div class="DailyCard archetype-card">
+                <div class="archetype-chart-container">
+                    <canvas class="archetype-chart" width="200" height="150"></canvas>
+                </div>
+                <div class="archetype-questions">
+                    <p>Did I observe my thoughts and emotions without judgment today?</p>
+                    <div class="radio-group">
+                        <input type="radio" id="sage-q1-yes" name="sage-q1" value="1">
+                        <label for="sage-q1-yes">Yes</label>
+                        <input type="radio" id="sage-q1-no" name="sage-q1" value="0">
+                        <label for="sage-q1-no">No</label>
+                    </div>
+                    <p>Did I convert any negative thoughts into positive ones today?</p>
+                    <div class="radio-group">
+                        <input type="radio" id="sage-q5-yes" name="sage-q5" value="1">
+                        <label for="sage-q5-yes">Yes</label>
+                        <input type="radio" id="sage-q5-no" name="sage-q5" value="0">
+                        <label for="sage-q5-no">No</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Warrior Archetype Section -->
+        <section class="archetype-section" data-archetype="warrior">
+            <div class="DailyCard archetype-card">
+                <div class="archetype-chart-container">
+                    <canvas class="archetype-chart" width="200" height="150"></canvas>
+                </div>
+                <div class="archetype-questions">
+                    <p>Did I consciously face discomfort or challenge today?</p>
+                    <div class="radio-group">
+                        <input type="radio" id="warrior-q1-yes" name="warrior-q1" value="1">
+                        <label for="warrior-q1-yes">Yes</label>
+                        <input type="radio" id="warrior-q1-no" name="warrior-q1" value="0">
+                        <label for="warrior-q1-no">No</label>
+                    </div>
+                    <p>Did I push my body through training or movement?</p>
+                    <div class="radio-group">
+                        <input type="radio" id="warrior-q3-yes" name="warrior-q3" value="1">
+                        <label for="warrior-q3-yes">Yes</label>
+                        <input type="radio" id="warrior-q3-no" name="warrior-q3" value="0">
+                        <label for="warrior-q3-no">No</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scholar Archetype Section -->
+        <section class="archetype-section" data-archetype="scholar">
+            <div class="DailyCard archetype-card">
+                <h3>Scholar Archetype</h3>
+                <div class="archetype-chart-container">
+                    <canvas class="archetype-chart" width="200" height="150"></canvas>
+                </div>
+                <div class="archetype-questions">
+                    <p>Did I stay focused during study/work sessions today?</p>
+                    <div class="radio-group">
+                        <input type="radio" id="scholar-q2-yes" name="scholar-q2" value="1">
+                        <label for="scholar-q2-yes">Yes</label>
+                        <input type="radio" id="scholar-q2-no" name="scholar-q2" value="0">
+                        <label for="scholar-q2-no">No</label>
+                    </div>
+                    <p>Did I learn something new or apply a concept meaningfully?</p>
+                    <div class="radio-group">
+                        <input type="radio" id="scholar-q3-yes" name="scholar-q3" value="1">
+                        <label for="scholar-q3-yes">Yes</label>
+                        <input type="radio" id="scholar-q3-no" name="scholar-q3" value="0">
+                        <label for="scholar-q3-no">No</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    
+    <div class="button-container">
+        <button class="back-btn">Back</button>
+        <button class="next-btn" data-section="archetype">Next</button>
+    </div>
+</div>
+
+        <!-- Summary Page -->
+        <div class="page" id="summary-insight">
+            <h2 id="theader">Your Daily Insights</h2>
+            <div class="DailyCard">
+                <canvas id="summaryChart" width="400" height="250"></canvas>
+                <div id="summaryText" style="margin-top: 20px;"></div>
+            </div>
+            <div class="button-container">
+                <button class="back-btn">Back</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
